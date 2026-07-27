@@ -1,0 +1,6 @@
+documentation:
+- changed-files:
+  - any-glob-to-any-file: '**/*.md'
+backend:
+- changed-files:
+  - any-glob-to-any-file: 'src/main/java/**'

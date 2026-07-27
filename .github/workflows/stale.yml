@@ -1,0 +1,14 @@
+name: Close stale issues
+on:
+  schedule:
+    - cron: '0 1 * * *'
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-days: 30
+          stale-pr-days: 30
+          close-issue-days: 7
+          close-pr-days: -1
