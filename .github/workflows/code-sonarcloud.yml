@@ -32,6 +32,15 @@ jobs:
       - name: Grant execute permission
         run: chmod +x mvnw
 
+      - name: Debug Maven Wrapper
+        run: |
+          pwd
+          ls -la
+          ls -la .mvn
+          ls -la .mvn/wrapper
+          cat .mvn/wrapper/maven-wrapper.properties
+          head -20 mvnw
+
       - name: Build project
         run: ./mvnw clean verify
 
