@@ -1,0 +1,27 @@
+name: code-PR-verify
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  unit-tests:
+    name: Unit Tests
+    uses: ./.github/workflows/code-unit_tests.yml
+
+  sonarcloud:
+    name: SonarCloud
+    needs: unit-tests
+    uses: ./.github/workflows/code-sonarcloud.yml
+    secrets: inherit
