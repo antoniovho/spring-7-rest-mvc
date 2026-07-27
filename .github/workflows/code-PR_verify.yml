@@ -1,20 +1,33 @@
 name: code-PR-verify
+
 on:
   pull_request:
-    types: [opened,synchronize,reopened,ready_for_review]
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+permissions:
+  contents: read
+
 concurrency:
   group: pr-${{ github.event.pull_request.number }}
   cancel-in-progress: true
-permissions:
-  contents: read
+
 jobs:
-  verify:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '21'
-          cache: maven
-      - run: chmod +x mvnw && ./mvnw clean verify
+  unit-tests:
+    name: Unit Tests
+    uses: ./.github/workflows/code-unit_tests.yml
+
+  sonarcloud:
+    name: SonarCloud
+    needs: unit-tests
+    uses: ./.github/workflows/code-sonarcloud.yml
+    secrets: inherit
+
+  codeql:
+    name: CodeQL
+    needs: unit-tests
+    uses: ./.github/workflows/codeql.yml
+    secrets: inherit
