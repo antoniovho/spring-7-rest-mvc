@@ -1,153 +1,151 @@
-labels:
+# -----------------------------
+# Kind
+# -----------------------------
 
-  # -----------------------------
-  # Kind
-  # -----------------------------
+- name: kind/feature
+  color: "0E8A16"
+  description: "New functionality"
 
-  - name: kind/feature
-    color: "0E8A16"
-    description: "New functionality"
+- name: kind/bug
+  color: "D73A4A"
+  description: "Bug or defect"
 
-  - name: kind/bug
-    color: "D73A4A"
-    description: "Bug or defect"
+- name: kind/hotfix
+  color: "B60205"
+  description: "Production incident"
 
-  - name: kind/hotfix
-    color: "B60205"
-    description: "Production incident"
+- name: kind/improvement
+  color: "1D76DB"
+  description: "Technical improvement"
 
-  - name: kind/improvement
-    color: "1D76DB"
-    description: "Technical improvement"
+- name: kind/refactor
+  color: "5319E7"
+  description: "Code refactoring"
 
-  - name: kind/refactor
-    color: "5319E7"
-    description: "Code refactoring"
+- name: kind/documentation
+  color: "0075CA"
+  description: "Documentation"
 
-  - name: kind/documentation
-    color: "0075CA"
-    description: "Documentation"
+- name: kind/test
+  color: "FBCA04"
+  description: "Testing"
 
-  - name: kind/test
-    color: "FBCA04"
-    description: "Testing"
+- name: kind/chore
+  color: "C5DEF5"
+  description: "Maintenance"
 
-  - name: kind/chore
-    color: "C5DEF5"
-    description: "Maintenance"
+- name: kind/dependency
+  color: "0366D6"
+  description: "Dependency updates"
 
-  - name: kind/dependency
-    color: "0366D6"
-    description: "Dependency updates"
+- name: kind/security
+  color: "B60205"
+  description: "Security"
 
-  - name: kind/security
-    color: "B60205"
-    description: "Security"
+- name: kind/spike
+  color: "7057FF"
+  description: "Technical investigation"
 
-  - name: kind/spike
-    color: "7057FF"
-    description: "Technical investigation"
+- name: kind/question
+  color: "D876E3"
+  description: "Question"
 
-  - name: kind/question
-    color: "D876E3"
-    description: "Question"
+# -----------------------------
+# Status
+# -----------------------------
 
-  # -----------------------------
-  # Status
-  # -----------------------------
+- name: status/backlog
+  color: "BFDADC"
+  description: "Waiting"
 
-  - name: status/backlog
-    color: "BFDADC"
-    description: "Waiting"
+- name: status/ready
+  color: "0E8A16"
+  description: "Ready to start"
 
-  - name: status/ready
-    color: "0E8A16"
-    description: "Ready to start"
+- name: status/in-progress
+  color: "FBCA04"
+  description: "Being implemented"
 
-  - name: status/in-progress
-    color: "FBCA04"
-    description: "Being implemented"
+- name: status/in-review
+  color: "5319E7"
+  description: "Under review"
 
-  - name: status/in-review
-    color: "5319E7"
-    description: "Under review"
+- name: status/blocked
+  color: "B60205"
+  description: "Blocked"
 
-  - name: status/blocked
-    color: "B60205"
-    description: "Blocked"
+- name: status/done
+  color: "1D76DB"
+  description: "Completed"
 
-  - name: status/done
-    color: "1D76DB"
-    description: "Completed"
+# -----------------------------
+# Priority
+# -----------------------------
 
-  # -----------------------------
-  # Priority
-  # -----------------------------
+- name: priority/high
+  color: "B60205"
+  description: "High priority"
 
-  - name: priority/high
-    color: "B60205"
-    description: "High priority"
+- name: priority/medium
+  color: "FBCA04"
+  description: "Medium priority"
 
-  - name: priority/medium
-    color: "FBCA04"
-    description: "Medium priority"
+- name: priority/low
+  color: "0E8A16"
+  description: "Low priority"
 
-  - name: priority/low
-    color: "0E8A16"
-    description: "Low priority"
+# -----------------------------
+# Area
+# -----------------------------
 
-  # -----------------------------
-  # Area
-  # -----------------------------
+- name: area/backend
+  color: "0052CC"
+  description: "Backend"
 
-  - name: area/backend
-    color: "0052CC"
-    description: "Backend"
+- name: area/api
+  color: "006B75"
+  description: "REST API"
 
-  - name: area/api
-    color: "006B75"
-    description: "REST API"
+- name: area/database
+  color: "5319E7"
+  description: "Database"
 
-  - name: area/database
-    color: "5319E7"
-    description: "Database"
+- name: area/configuration
+  color: "C2E0C6"
+  description: "Configuration"
 
-  - name: area/configuration
-    color: "C2E0C6"
-    description: "Configuration"
+- name: area/security
+  color: "B60205"
+  description: "Security"
 
-  - name: area/security
-    color: "B60205"
-    description: "Security"
+- name: area/testing
+  color: "FBCA04"
+  description: "Testing"
 
-  - name: area/testing
-    color: "FBCA04"
-    description: "Testing"
+- name: area/github
+  color: "24292E"
+  description: "GitHub"
 
-  - name: area/github
-    color: "24292E"
-    description: "GitHub"
+- name: area/docker
+  color: "0DB7ED"
+  description: "Docker"
 
-  - name: area/docker
-    color: "0DB7ED"
-    description: "Docker"
+# -----------------------------
+# Community
+# -----------------------------
 
-  # -----------------------------
-  # Community
-  # -----------------------------
+- name: help wanted
+  color: "008672"
+  description: "Extra attention is needed"
 
-  - name: help wanted
-    color: "008672"
-    description: "Extra attention is needed"
+- name: good first issue
+  color: "7057FF"
+  description: "Good for newcomers"
 
-  - name: good first issue
-    color: "7057FF"
-    description: "Good for newcomers"
+# -----------------------------
+# Dependencies
+# -----------------------------
 
-  # -----------------------------
-  # Dependencies
-  # -----------------------------
-
-  - name: dependencies
-    color: "0366D6"
-    description: "Dependency update"
+- name: dependencies
+  color: "0366D6"
+  description: "Dependency update"
