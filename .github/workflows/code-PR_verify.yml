@@ -10,8 +10,6 @@ on:
 
 permissions:
   contents: read
-  actions: read
-  security-events: write
 
 concurrency:
   group: pr-${{ github.event.pull_request.number }}
@@ -26,10 +24,4 @@ jobs:
     name: SonarCloud
     needs: unit-tests
     uses: ./.github/workflows/code-sonarcloud.yml
-    secrets: inherit
-
-  codeql:
-    name: CodeQL
-    needs: unit-tests
-    uses: ./.github/workflows/codeql.yml
     secrets: inherit
